@@ -54,3 +54,4 @@ publish/
 # Environment config (optional)
 .env
 .env.*
+.vs/
