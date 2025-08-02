@@ -1,0 +1,56 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Core Secrets
+secrets.json
+
+# Logs
+logs/
+*.log
+
+# Serilog rolling logs
+*.txt
+
+# Rider project files
+.idea/
+
+# Visual Studio Code settings
+.vscode/
+
+# Package caches
+*.nupkg
+packages/
+
+# Resharper / JetBrains
+*.DotSettings.user
+
+# Dotnet tools
+tools/
+
+# Auto-generated files
+Generated_Code/
+
+# Publish output
+publish/
+*.Publish.xml
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Docker
+**/.dockerignore
+**/Dockerfile
+
+# Environment config (optional)
+.env
+.env.*
