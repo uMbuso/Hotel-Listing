@@ -1,4 +1,5 @@
-
+using HotelListing.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace HotelListing
@@ -27,6 +28,9 @@ namespace HotelListing
                         .AllowAnyHeader();
                 });
             });
+
+            builder.Services.AddDbContext<DatabaseContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection")));
 
             // Add services to the container.
             builder.Services.AddControllers();
