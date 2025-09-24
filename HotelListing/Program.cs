@@ -1,6 +1,9 @@
+using HotelListing.Configurations;
 using HotelListing.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using AutoMapper;
 
 namespace HotelListing
 {
@@ -34,6 +37,7 @@ namespace HotelListing
 
             // Add services to the container.
             builder.Services.AddControllers();
+            builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MapperInitializer>());
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
